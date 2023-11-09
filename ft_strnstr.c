@@ -1,41 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 10:46:34 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/09 14:33:40 by algultse         ###   ########.fr       */
+/*   Created: 2023/11/09 15:26:16 by algultse          #+#    #+#             */
+/*   Updated: 2023/11/09 15:28:34 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*p;
-
-	p = NULL;
-	while (*s)
-	{
-		if (*s == (char)c)
-			p = (char *)s;
-		s++;
-	}
-	if (*s == (char)c)
-		return ((char *)s);
-	return (p);
+	
 }
 
-/*
 #include <stdio.h>
 int	main()
 {
-	char str[] = "Test strisnt";
-	
-	printf("ft_strrchr: [%s]\n", ft_strrchr(str, 's'));
-	printf("strrchr: [%s]\n", strrchr(str, 's'));
+	strnstr();
 	return (0);
 }
-*/

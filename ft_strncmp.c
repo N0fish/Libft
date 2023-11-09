@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 10:46:34 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/09 14:33:40 by algultse         ###   ########.fr       */
+/*   Created: 2023/11/09 14:37:38 by algultse          #+#    #+#             */
+/*   Updated: 2023/11/09 15:16:49 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*p;
+	size_t	i;
 
-	p = NULL;
-	while (*s)
-	{
-		if (*s == (char)c)
-			p = (char *)s;
-		s++;
-	}
-	if (*s == (char)c)
-		return ((char *)s);
-	return (p);
+	i = 0;
+	while ((s1[i] == s2[i]) && (s1[i] && s2[i]) && i < n)
+		i++;
+	return (s1[i] - s2[i]);
 }
 
 /*
 #include <stdio.h>
 int	main()
 {
-	char str[] = "Test strisnt";
+	char str1[] = "Test strisnt";
+	char str2[] = "Test strisns";
 	
-	printf("ft_strrchr: [%s]\n", ft_strrchr(str, 's'));
-	printf("strrchr: [%s]\n", strrchr(str, 's'));
+	printf("ft_strrchr: [%d]\n", ft_strncmp(str1, str2, (size_t)20));
+	printf("strrchr: [%d]\n", strncmp(str1, str2, (size_t)20));
 	return (0);
 }
 */

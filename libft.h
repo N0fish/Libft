@@ -1,10 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/07 11:12:11 by algultse          #+#    #+#             */
+/*   Updated: 2023/11/07 11:12:12 by algultse         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
 
 #endif
