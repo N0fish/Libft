@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 14:37:38 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/10 12:49:03 by algultse         ###   ########.fr       */
+/*   Created: 2023/11/10 17:17:25 by algultse          #+#    #+#             */
+/*   Updated: 2023/11/10 17:20:23 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_isprint(int c)
 {
-	size_t	i;
 
-	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] && s2[i]) && i < n)
-		i++;
-	return (s1[i] - s2[i]);
 }
 
 /*
 #include <stdio.h>
 int	main()
 {
-	char str1[] = "Test strisnt";
-	char str2[] = "Test strisns";
-	
-	printf("ft_strncmp: [%d]\n", ft_strncmp(str1, str2, (size_t)20));
-	printf("strncmp: [%d]\n", strncmp(str1, str2, (size_t)20));
+	printf("ft_isprint: [%d]", ft_isprint('0'));
+	// printf("isprint: [%d]", isprint('9'));
 	return (0);
 }
 */

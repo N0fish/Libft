@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:26:16 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/09 18:55:21 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/10 11:58:57 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	
+
 	if (!big && !len)
 		return (0);
 	if (!*little)
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		big++;
 	}
-	return  (NULL);
+	return (NULL);
 }
 
 /*

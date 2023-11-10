@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 14:37:38 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/10 12:49:03 by algultse         ###   ########.fr       */
+/*   Created: 2023/11/10 13:01:14 by algultse          #+#    #+#             */
+/*   Updated: 2023/11/10 17:15:26 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_isalnum(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] && s2[i]) && i < n)
-		i++;
-	return (s1[i] - s2[i]);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'))
+		return (1);
+	return (0);
 }
 
 /*
 #include <stdio.h>
 int	main()
 {
-	char str1[] = "Test strisnt";
-	char str2[] = "Test strisns";
-	
-	printf("ft_strncmp: [%d]\n", ft_strncmp(str1, str2, (size_t)20));
-	printf("strncmp: [%d]\n", strncmp(str1, str2, (size_t)20));
+	printf("ft_isalnum: [%d]", ft_isalnum('a'));
+	// printf("isalnum: [%d]", isalnum('a'));
 	return (0);
 }
 */
