@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 12:03:39 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/10 13:00:54 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:16:06 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ int	ft_isalpha(int c)
 
 /*
 #include <stdio.h>
+#include <ctype.h>
 int	main()
 {
-	printf("ft_isalpha: [%d]", ft_isalpha('a'));
-	// printf("isalpha: [%d]", isalpha('a'));
+	printf("ft_isalpha: [%d]\n", ft_isalpha('a'));
+	printf("isalpha: [%d]\n", isalpha('a'));
 	return (0);
 }
 */

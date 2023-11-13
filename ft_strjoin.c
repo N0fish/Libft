@@ -1,31 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 12:46:17 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/11 18:18:01 by algultse         ###   ########.fr       */
+/*   Created: 2023/11/12 18:00:52 by algultse          #+#    #+#             */
+/*   Updated: 2023/11/13 12:51:08 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	char	*s_dest;
+	char	*p_dest;
+	size_t	len;
+
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2);
+	if (!(s_dest = malloc(sizeof(char) * (len +1))))
+		return (NULL);
+	p_dest = s_dest;
+	while (*s1)
+		*s_dest++ = *s1++;
+	while (*s2)
+		*s_dest++ = *s2++;
+	return (p_dest);
 }
 
 /*
 #include <stdio.h>
-#include <ctype.h>
-int	main()
+int main()
 {
-	printf("ft_isdigit: [%d]\n", ft_isdigit('0'));
-	printf("isdigit: [%d]\n", isdigit('0'));
+	printf ("ft_strjoin: [%s]\n", ft_strjoin("Hello", "Hi"));
 	return (0);
 }
 */

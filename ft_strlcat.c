@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:43:41 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/10 15:48:36 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/11 16:45:46 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,35 +18,35 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	s_src;
 	size_t	i;
 
-	if (!dst || !src)
-		return (0);
+	s_dst = 0;
+	s_src = 0;
 	while (src[s_src])
-		++s_src;
-	while (dst[s_dst] && dstsize > s_dst)
-		++s_dst;
-	if (s_dst >= dstsize)
-		return (s_src + dstsize);
+		s_src++;
+	while (dst[s_dst] && s_dst < dstsize)
+		s_dst++;
 	i = 0;
 	while (s_dst + i < dstsize - 1 && src[i])
 	{
-		++i;
 		dst[s_dst + i] = src[i];
+		i++;
 	}
 	dst[s_dst + i] = '\0';
 	return (s_dst + s_src);
 }
 
-/*
+
 #include <stdio.h>
 int	main()
 {
 	char src[] = "Test string";
-	char dst[12] = "0123456789";
+	char dst[15] = "0123456789";
+	char dst2[15] = "0123456789";
 
-	size_t result = ft_strlcat(dst, src, sizeof(dst));
-	// size_t result = strlcat(dst, src, sizeof(dst));
-	printf("strlcat вернула: %zu\n", result);
-	printf("dst теперь содержит: '%s'\n", dst);
+	printf("sizeof вернула: %zu\n", strlen(dst));
+	printf("ft_strlcat вернула: %zu\n", ft_strlcat(dst, src, sizeof(dst)));
+	printf("sizeof вернула: %zu\n", strlen(dst2));
+	printf("strlcat вернула: %zu\n", strlcat(dst2, src, sizeof(dst2)));
+	printf("dst ft_strlcat теперь содержит: '%s'\n", dst);
+	printf("dst strlcat теперь содержит: '%s'\n", dst2);
 	return (0);
 }
-*/

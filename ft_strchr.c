@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:18:41 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/09 15:24:38 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:34:29 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ int	main()
 {
 	char str[] = "Test string";
 
-	printf("ft_strchr: [%s]\n", ft_strchr(str, 'e'));
-	printf("strchr: [%s]\n", strchr(str, '\0'));
+	printf("ft_strchr: [%s]\n", ft_strchr(str, 'z'));
+	printf("strchr: [%s]\n", strchr(str, 'e'));
 	return (0);
 }
 */

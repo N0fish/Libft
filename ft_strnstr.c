@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 15:26:16 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/10 11:58:57 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/13 19:19:38 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,17 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return (0);
 	if (!*little)
 		return ((char *)big);
-	while (len-- && *big)
+	while (len && *big)
 	{
 		i = 0;
-		while ((*(big + i) == *(little + i)) && *(little + i) && len >= i)
+		while ((*(big + i) == *(little + i)) && *(little + i) && len > i)
 		{
 			if (!*(little + i + 1))
 				return ((char *)big);
 			i++;
 		}
 		big++;
+		len--;
 	}
 	return (NULL);
 }
@@ -38,11 +39,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 #include <stdio.h>
 int	main()
 {
-	char str1[] = "Test string";
-	char str2[] = "str";
+	char str1[] = "abcacb";
+	char str2[] = "bca";
 	
-	printf("ft_strnstr: [%s]\n", ft_strnstr(str1, str2, (size_t)8));
-	printf("strnstr: [%s]\n", strnstr(str1, str2, (size_t)8));
+	printf("ft_strnstr: [%s]\n", ft_strnstr(str1, str2, (size_t)9));
+	printf("strnstr: [%s]\n", strnstr(str1, str2, (size_t)9));
 	return (0);
 }
 */

@@ -1,31 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 12:46:17 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/11 18:18:01 by algultse         ###   ########.fr       */
+/*   Created: 2023/11/13 22:09:26 by algultse          #+#    #+#             */
+/*   Updated: 2023/11/13 22:51:44 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int	ft_isdigit(int c)
-{
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
-}
-
-/*
 #include <stdio.h>
-#include <ctype.h>
-int	main()
+
+char	*create_memory(int n)
 {
-	printf("ft_isdigit: [%d]\n", ft_isdigit('0'));
-	printf("isdigit: [%d]\n", isdigit('0'));
+	int		tmp;
+	int		i;
+
+	tmp = n;
+	i = 0;
+	while (tmp > 0)
+	{
+		tmp /= 10;
+		i++;
+	}
+	return (malloc(sizeof(char) * (i + 1)));
+}
+
+char *ft_itoa(int n)
+{
+	char	*res;
+	int		tmp;
+	int		i;
+
+	if (!(res = reate_memory(n)))
+		return (NULL);
+	
+}
+
+
+#include <stdio.h>
+int main()
+{
+	printf ("create_memory: [%s]\n", create_memory(12345));
+	// printf ("ft_itoa: [%s]\n", ft_itoa(12345));
 	return (0);
 }
-*/

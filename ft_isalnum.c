@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:01:14 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/10 17:15:26 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/11 18:15:14 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,11 @@ int	ft_isalnum(int c)
 
 /*
 #include <stdio.h>
+#include <ctype.h>
 int	main()
 {
-	printf("ft_isalnum: [%d]", ft_isalnum('a'));
-	// printf("isalnum: [%d]", isalnum('a'));
+	printf("ft_isalnum: [%d]\n", ft_isalnum('\n'));
+	printf("isalnum: [%d]\n", isalnum('\n'));
 	return (0);
 }
 */

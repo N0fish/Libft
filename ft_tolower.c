@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 12:46:17 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/11 18:18:01 by algultse         ###   ########.fr       */
+/*   Created: 2023/11/11 18:23:10 by algultse          #+#    #+#             */
+/*   Updated: 2023/11/11 18:26:23 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_tolower(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }
 
 /*
@@ -24,8 +24,8 @@ int	ft_isdigit(int c)
 #include <ctype.h>
 int	main()
 {
-	printf("ft_isdigit: [%d]\n", ft_isdigit('0'));
-	printf("isdigit: [%d]\n", isdigit('0'));
+	printf("ft_tolower: [%c]\n", ft_tolower('Z'));
+	printf("tolower: [%c]\n", tolower('Z'));
 	return (0);
 }
 */
