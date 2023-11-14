@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 22:09:26 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/14 14:11:54 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:37:39 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,33 +15,42 @@
 
 char	*create_memory(int n, int *len)
 {
-	int	i;
-
-	i = 0;
-	len = &i;
 	if (n < 0)
 	{
 		n = -n;
-		i++;
+		(*len)++;
 	}
 	while (n > 0)
 	{
 		n /= 10;
-		i++;
+		(*len)++;
 	}
-	return (malloc(sizeof(char) * (i + 1)));
+	return (malloc(sizeof(char) * (*len + 1)));
+}
+
+void	write_res(char *res, int len, int n)
+{
+	res[len] = '\0';
+	len--;
+	while (n)
+	{
+		res[len] = n % 10 + '0';
+		n /= 10;
+		len--;
+	}
 }
 
 char	*ft_itoa(int n)
 {
 	char	*res;
-	int		*len;
+	int		len;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	res = create_memory(n, len);
+	len = 0;
+	res = create_memory(n, &len);
 	if (!res)
 		return (NULL);
 	if (n < 0)
@@ -49,12 +58,7 @@ char	*ft_itoa(int n)
 		n = -n;
 		res[0] = '-';
 	}
-	while (n)
-	{
-		res[*len] = n % 10 + '0';
-		n /= 10;
-		len--;
-	}
+	write_res(res, len, n);
 	return (res);
 }
 
@@ -62,7 +66,6 @@ char	*ft_itoa(int n)
 #include <stdio.h>
 int main()
 {
-	// printf ("create_memory: [%s]\n", create_memory(12345));
 	printf ("ft_itoa: [%s]\n", ft_itoa(12345));
 	return (0);
 }
