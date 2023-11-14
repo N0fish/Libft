@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:02:09 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/14 12:16:02 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/14 13:21:37 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 int main()
 {
 	printf ("ft_strtrim: [%s]\n", ft_strtrim("saltuttas", "sat"));
-	// printf ("count_char_to_remove: [%d]\n", count_char_to_remove("salutas", "sat"));
+	printf ("count_char_to_remove: [%d]\n", count_char_to_remove("salutas", "sat"));
 	return (0);
 }
 */
