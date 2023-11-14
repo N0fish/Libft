@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:25:36 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/14 12:10:26 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/15 00:56:25 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,13 @@ char	*get_str_chunk(char const *s, char c, int len, int *p_start)
 	return (str);
 }
 
+void	zero_values(int *i, int *n, int *p_start)
+{
+	*i = 0;
+	*n = 0;
+	*p_start = 0;
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -55,23 +62,22 @@ char	**ft_split(char const *s, char c)
 	int		p_start;
 
 	res = do_res_malloc(s, c);
-	if (!(res))
+	if (!res)
 		return (NULL);
-	i = 0;
-	n = 0;
-	p_start = 0;
+	zero_values(&i, &n, &p_start);
 	while (s[i])
 	{
 		if (s[i] == c)
 		{
 			res[n] = get_str_chunk(s, c, i - p_start, &p_start);
-			if (!(res[n++]))
+			if (!res[n])
 				return (NULL);
+			n++;
 		}
 		i++;
 	}
 	res[n] = get_str_chunk(s, c, i - p_start, &p_start);
-	if (!(res[n]))
+	if (!res[n])
 		return (NULL);
 	return (res);
 }
