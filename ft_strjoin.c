@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 18:00:52 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/13 12:51:08 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/14 12:11:54 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	if (!(s_dest = malloc(sizeof(char) * (len +1))))
+	s_dest = malloc(sizeof(char) * (len +1));
+	if (!(s_dest))
 		return (NULL);
 	p_dest = s_dest;
 	while (*s1)

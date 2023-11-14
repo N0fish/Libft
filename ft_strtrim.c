@@ -6,13 +6,13 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:02:09 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/13 18:15:36 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/14 12:16:02 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int count_char_to_remove(char const *s1, char const *set)
+int	count_char_to_remove(char const *s1, char const *set)
 {
 	int		j;
 	int		i;
@@ -27,7 +27,7 @@ int count_char_to_remove(char const *s1, char const *set)
 		j++;
 	if (size_s1 == 0 && ft_strchr(set, s1[size_s1]))
 		j++;
-	return j;
+	return (j);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -41,7 +41,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	j = count_char_to_remove(s1, set);
 	len_res = (int)ft_strlen(s1) - j;
-	if (!(res = malloc(sizeof(char *) * (len_res + 1))))
+	res = malloc(sizeof(char *) * (len_res + 1));
+	if (!(res))
 		return (NULL);
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 18:28:44 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/12 14:50:47 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/14 12:06:10 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (size != 0 && count > (size_t)-1 / size)
 		return (NULL);
-	if (!(mem = malloc(size * count)))
+	mem = malloc(size * count);
+	if (!(mem))
 		return (NULL);
 	ft_memset(mem, 0, size * count);
 	return (mem);

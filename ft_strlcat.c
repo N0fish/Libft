@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:43:41 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/11 16:45:46 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/14 12:13:05 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (s_dst + s_src);
 }
 
-
+/*
 #include <stdio.h>
 int	main()
 {
@@ -50,3 +50,4 @@ int	main()
 	printf("dst strlcat теперь содержит: '%s'\n", dst2);
 	return (0);
 }
+*/

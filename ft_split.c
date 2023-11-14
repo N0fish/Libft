@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:25:36 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/13 22:07:20 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/14 12:10:26 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ char	*get_str_chunk(char const *s, char c, int len, int *p_start)
 {
 	char	*str;
 	int		j;
-	
+
 	j = 0;
-	if (!(str = malloc(sizeof(char) * (len + 1))))
+	str = malloc(sizeof(char) * (len + 1));
+	if (!(str))
 		return (NULL);
 	while (s[*p_start] != c && s[*p_start])
 	{
@@ -52,8 +53,9 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		n;
 	int		p_start;
-	
-	if (!(res = do_res_malloc(s, c)))
+
+	res = do_res_malloc(s, c);
+	if (!(res))
 		return (NULL);
 	i = 0;
 	n = 0;
@@ -62,13 +64,14 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] == c)
 		{
-			if (!(res[n] = get_str_chunk(s, c, i - p_start, &p_start))) 
+			res[n] = get_str_chunk(s, c, i - p_start, &p_start);
+			if (!(res[n++]))
 				return (NULL);
-			n++;
 		}
 		i++;
 	}
-	if (!(res[n] = get_str_chunk(s, c, i - p_start, &p_start))) 
+	res[n] = get_str_chunk(s, c, i - p_start, &p_start);
+	if (!(res[n]))
 		return (NULL);
 	return (res);
 }
