@@ -6,7 +6,7 @@
 #    By: algultse <algultse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 16:46:39 by algultse          #+#    #+#              #
-#    Updated: 2023/11/15 10:45:27 by algultse         ###   ########.fr        #
+#    Updated: 2023/11/15 12:31:24 by algultse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,21 +18,21 @@ AR = ar rs
 
 SRCS = *.c
 
-OBJ = .o
+OBJS = *.o
 
-all: $(NAME)
+all : $(NAME)
 
-$(NAME):
+$(NAME) :
 		$(CC) $(FLAGS) $(SRCS)
 		$(AR) $(NAME) $(OBJ)
-		ralib $(NAME)
+		ranlib $(NAME)
 
-clean:
-		/bin/rm -f $(OBJ)
+clean :
+		rm -f $(OBJS)
 
-fclean: clean
-		/bin/rm -rf $(NAME)
+fclean : clean
+		rm -rf $(NAME)
 
-re: fclean all
+re : fclean all
 
 .PHONY: all clean fclean re
