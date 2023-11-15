@@ -6,8 +6,33 @@
 #    By: algultse <algultse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 16:46:39 by algultse          #+#    #+#              #
-#    Updated: 2023/11/06 16:46:42 by algultse         ###   ########.fr        #
+#    Updated: 2023/11/15 10:45:27 by algultse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# NAME, all, clean, fclean, re
+NAME = libft.a
+CC = gcc -c
+INCLUDE = libft.h
+FLAGS = -Wall -Wextra -Werror
+AR = ar rs
+
+SRCS = *.c
+
+OBJ = .o
+
+all: $(NAME)
+
+$(NAME):
+		$(CC) $(FLAGS) $(SRCS)
+		$(AR) $(NAME) $(OBJ)
+		ralib $(NAME)
+
+clean:
+		/bin/rm -f $(OBJ)
+
+fclean: clean
+		/bin/rm -rf $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
