@@ -6,12 +6,11 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 22:09:26 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/16 21:15:47 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 00:14:58 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	*create_memory(int n, int *len)
 {

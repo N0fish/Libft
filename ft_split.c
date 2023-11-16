@@ -6,12 +6,11 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:25:36 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/16 23:26:47 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 00:17:58 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static char	**do_res_malloc(char const *s, char c, size_t *pnts)
 {
@@ -83,7 +82,6 @@ char	**ft_split(char const *s, char c)
 	}
 	return (res);
 }
-
 
 /*
 #include <stdio.h>
