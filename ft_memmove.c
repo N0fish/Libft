@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:08:42 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/09 15:23:02 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/15 22:54:18 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		while (len--)
 			*d_dest++ = *s_src++;
 	}
-	return (d_dest);
+	return (dest);
 }
 
 /*

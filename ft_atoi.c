@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 18:39:20 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/10 11:59:12 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/16 14:43:32 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 	}
 	while (*str >= '0' && *str <= '9')
 	{
-		res = res * 10 + (*(str - '0'));
+		res = res * 10 + (*str - '0');
 		str++;
 	}
 	return (size * res);

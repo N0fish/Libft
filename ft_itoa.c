@@ -6,14 +6,14 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 22:09:26 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/15 00:37:39 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/16 21:15:47 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char	*create_memory(int n, int *len)
+static char	*create_memory(int n, int *len)
 {
 	if (n < 0)
 	{
@@ -28,7 +28,7 @@ char	*create_memory(int n, int *len)
 	return (malloc(sizeof(char) * (*len + 1)));
 }
 
-void	write_res(char *res, int len, int n)
+static void	write_res(char *res, int len, int n)
 {
 	res[len] = '\0';
 	len--;

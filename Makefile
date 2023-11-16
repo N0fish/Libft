@@ -6,7 +6,7 @@
 #    By: algultse <algultse@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 16:46:39 by algultse          #+#    #+#              #
-#    Updated: 2023/11/15 12:37:19 by algultse         ###   ########.fr        #
+#    Updated: 2023/11/16 23:35:06 by algultse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 CC = gcc -c
 INCLUDE = libft.h
 FLAGS = -Wall -Wextra -Werror
-AR = ar rs
+AR = ar rcs
 
 SRCS = *.c
 
@@ -25,7 +25,6 @@ all : $(NAME)
 $(NAME) :
 		$(CC) $(FLAGS) $(SRCS)
 		$(AR) $(NAME) $(OBJS)
-		ranlib $(NAME)
 
 clean :
 		rm -f $(OBJS)

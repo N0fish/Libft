@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 14:37:38 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/10 12:49:03 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/15 23:10:52 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	size_t	i;
 
 	i = 0;
-	while ((s1[i] == s2[i]) && (s1[i] && s2[i]) && i < n)
+	if (!s1 || !s2 || !n)
+		return (0);
+	while (s1[i] == s2[i] && s1[i] && s2[i] && i + 1 < n)
 		i++;
 	return (s1[i] - s2[i]);
 }

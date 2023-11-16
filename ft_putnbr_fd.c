@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:14:38 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/15 10:30:12 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/15 22:31:16 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n < 0)
 	{	
+		n = -n;
 		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-n, fd);
 	}
 	if (n < 10)
 	{
@@ -38,7 +38,7 @@ void	ft_putnbr_fd(int n, int fd)
 #include <stdio.h>
 int main()
 {
-	ft_putnbr_fd(-650, 0);
+	ft_putnbr_fd(-42, 1);
 	return (0);
 }
 */
