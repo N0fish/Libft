@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 15:03:45 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/15 23:20:33 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:55:21 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	s_len = ft_strlen(s);
 	if (start >= s_len)
-		return (malloc(1));
+		return (ft_strdup(""));
 	if (len > s_len - start)
 		len = s_len - start;
 	p = malloc(sizeof(char) * (len + 1));

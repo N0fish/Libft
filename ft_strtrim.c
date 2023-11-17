@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:02:09 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/16 21:16:36 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:56:37 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	j = count_char_to_remove(s1, set);
 	len_res = (int)ft_strlen(s1) - j;
 	if (len_res <= 0)
-		return (malloc(1));
+		return (ft_strdup(""));
 	res = malloc(sizeof(char) * (len_res + 1));
 	if (!res)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:08:34 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/09 15:21:09 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 15:34:33 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 	const unsigned char	*p_src;
 	size_t				i;
 
+	if (!dest && !src)
+		return (0);
 	p_dest = (unsigned char *)dest;
 	p_src = (const unsigned char *)src;
 	i = 0;

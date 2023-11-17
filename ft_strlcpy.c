@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:14:46 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/08 20:41:21 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:49:36 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	if (!src || !dest)
-		return (0);
 	while (*(src + i))
 		i++;
 	if (!dstsize)

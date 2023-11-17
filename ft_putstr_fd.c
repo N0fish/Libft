@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:12:14 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/14 16:19:51 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 16:04:30 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 	{
 		write (fd, &*s, 1);

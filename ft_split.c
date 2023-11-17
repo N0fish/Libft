@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:25:36 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/17 13:17:47 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 17:40:32 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,14 @@ char	**ft_split(char const *s, char c)
 	while (n < pnts)
 	{
 		res[n] = get_str_chunk(s, c, &i);
+		if (!res[n])
+		{
+			free(res);
+			return (NULL);
+		}
 		n++;
 	}
+	res[n] = NULL;
 	return (res);
 }
 
