@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:43:41 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/16 13:54:38 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 11:54:20 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ int	main()
 	char dst2[15] = "0123456789";
 
 	printf("sizeof вернула: %zu\n", strlen(dst));
-	printf("ft_strlcat вернула: %zu %zu\n", ft_strlcat(dst, src, sizeof(dst)), sizeof(dst));
+	printf("ft_strlcat вернула: %zu %zu\n", \
+		ft_strlcat(dst, src, sizeof(dst)), sizeof(dst));
 	printf("sizeof вернула: %zu\n", strlen(dst2));
 	printf("strlcat вернула: %zu\n", strlcat(dst2, src, sizeof(dst2)));
 	printf("dst ft_strlcat теперь содержит: '%s'\n", dst);

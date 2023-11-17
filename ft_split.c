@@ -6,7 +6,7 @@
 /*   By: algultse <algultse@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:25:36 by algultse          #+#    #+#             */
-/*   Updated: 2023/11/17 00:17:58 by algultse         ###   ########.fr       */
+/*   Updated: 2023/11/17 13:17:47 by algultse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static char	**do_res_malloc(char const *s, char c, size_t *pnts)
 
 static char	*get_str_chunk(char const *s, char c, size_t *i)
 {
-	char 		*res;
+	char		*res;
 	size_t		n;
 
 	if (!s)
@@ -48,7 +48,7 @@ static char	*get_str_chunk(char const *s, char c, size_t *i)
 	n = 0;
 	while (s[*i + n] != c && s[*i + n])
 		n++;
-	if (!n) 
+	if (!n)
 		return (NULL);
 	res = malloc(sizeof(char) * (n + 1));
 	if (!res)
