@@ -63,6 +63,19 @@ static char	*get_str_chunk(char const *s, char c, size_t *i)
 	return (res);
 }
 
+static void	free_all(char **res, size_t n)
+{
+	size_t i;
+
+	i = 0;
+	while (i < n)
+	{
+		free(res[i]);
+		i++;
+	}
+	free(res);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
@@ -80,7 +93,7 @@ char	**ft_split(char const *s, char c)
 		res[n] = get_str_chunk(s, c, &i);
 		if (!res[n])
 		{
-			free(res);
+			free_all(res, n);
 			return (NULL);
 		}
 		n++;
