@@ -1,10 +1,12 @@
 <img title="42_libft" alt="42_libft" src="./subject/banner.png" width="100%">
 
+|          Grade          |          Tests          |
+|:-----------------------:|:-----------------------:|
+| ![](./subject/grade.png) | ![](./subject/detail.png) |
+
 <br>
 
 ---
-
-<br>
 
 <details>
 <summary>🇫🇷 FRENCH VERSION</summary>
@@ -32,12 +34,7 @@ make
 
 </details>
 
-
-<br>
-
 ---
-
-<br>
 
 <details>
 <summary>🇬🇧 ENGLISH VERSION</summary>
@@ -65,11 +62,7 @@ make
 
 </details>
 
-<br>
-
----  
-
-<br>
+---
 
 <details>
 <summary>🇷🇺 RUSSIAN VERSION</summary>
@@ -96,8 +89,6 @@ make
 ```
 
 </details>
-
-<br>
 
 ---
 
